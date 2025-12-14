@@ -10,22 +10,6 @@ import streamlit as st
 
 load_dotenv()
 
-# generator_llm = ChatGoogleGenerativeAI(
-#     model = "gemini-2.5-flash",
-#     google_api_key = os.getenv('GOOGLE_API_KEY')
-#
-# )
-# evaluator_llm = ChatGoogleGenerativeAI(
-#     model = "gemini-2.5-flash",
-#     google_api_key = os.getenv('GOOGLE_API_KEY')
-#
-# )
-# optimizer_llm = ChatGoogleGenerativeAI(
-#     model = "gemini-2.5-flash",
-#     google_api_key = os.getenv('GOOGLE_API_KEY')
-#
-# )
-
 generator_llm = ChatGroq(
     model = "openai/gpt-oss-20b",
     api_key = os.getenv('GROQ_API_KEY')
@@ -208,8 +192,4 @@ if st.button("Submit"):
         st.write(output_state['tweet'])
     else:
         st.write("Please Enter Something")
-
-
-
-# print(output_state['tweet'])
 
